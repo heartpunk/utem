@@ -1,0 +1,86 @@
+{
+  "ayxg_commit": "5106df06d92620da810c325b8779ce97a14f7f0e",
+  "wruh_commit": "16d77877512d97fad0622a7a6ac401cf8b2dd538",
+  "sources": [
+    {
+      "module": "Ayxg.LTS",
+      "path": "ayxg/Ayxg/LTS.lean",
+      "sha256": "c95c4b4f71e7571034fa1959e4e4ce1df6fb27b1cf46a40b50aaecd6d7920825"
+    },
+    {
+      "module": "Ayxg.QfAbv.FpTypes",
+      "path": "ayxg/Ayxg/QfAbv/FpTypes.lean",
+      "sha256": "06a0fc66d65cdf4893fae40e56b43c6616bff8054ee3b15366c81af5448d04dd"
+    },
+    {
+      "module": "Ayxg.QfAbv.Ast",
+      "path": "ayxg/Ayxg/QfAbv/Ast.lean",
+      "sha256": "4fb9423655ef4b25814aaf2ebd56df77c47eee6d66f590ba70d8362869102ac1"
+    },
+    {
+      "module": "Ayxg.QfAbv.FpEval",
+      "path": "ayxg/Ayxg/QfAbv/FpEval.lean",
+      "sha256": "41e261fa3e50e63bba6ea9711a59dffcf63b2959405e9e324ff365f861cd1c65"
+    },
+    {
+      "module": "Ayxg.QfAbv.Eval",
+      "path": "ayxg/Ayxg/QfAbv/Eval.lean",
+      "sha256": "b416a3d1d801277dbcd23ea01ba1fc8992f11e13394049c7fe1b0455925b07e3"
+    },
+    {
+      "module": "Ayxg.QfAbv.Subst",
+      "path": "ayxg/Ayxg/QfAbv/Subst.lean",
+      "sha256": "2c148245ceb1fd5dc31c9d768f1941bff7475e754302a942338915a30c2a39ee"
+    },
+    {
+      "module": "Ayxg.QfAbv.Update",
+      "path": "ayxg/Ayxg/QfAbv/Update.lean",
+      "sha256": "955e624cd1ed14d817c46eca8cb5879c67fe1a43e05f226a434120c93bfccc16"
+    },
+    {
+      "module": "Ayxg.QfAbv.SymbolicLabel",
+      "path": "ayxg/Ayxg/QfAbv/SymbolicLabel.lean",
+      "sha256": "ef4ce7602321191bd9712befc7299dc8e9fe16d0b6b1b19555522780f9120687"
+    },
+    {
+      "module": "Ayxg.LTS.QfAbv.SymbolicTransition",
+      "path": "ayxg/Ayxg/LTS/QfAbv/SymbolicTransition.lean",
+      "sha256": "8f5486832608b2e461c30406666f5f07c68b3bb1bec3e816d8aa7d811c37c486"
+    },
+    {
+      "module": "Ayxg.LTS.QfAbv.SymbolicTransitionSystem",
+      "path": "ayxg/Ayxg/LTS/QfAbv/SymbolicTransitionSystem.lean",
+      "sha256": "c86ffab8f1811b2e75b7b6657f38c118b25e7970e7372cf27d7b5c6dd96fa2a2"
+    },
+    {
+      "module": "Ayxg.STS",
+      "path": "ayxg/Ayxg/STS.lean",
+      "sha256": "f579a7d5a5655615f487c2489f5d71c2fd96e59b7e03e2ab0a86b8bb9b37d08b"
+    },
+    {
+      "module": "Ayxg.QfAbv.Step",
+      "path": "ayxg/Ayxg/QfAbv/Step.lean",
+      "sha256": "0c432448e3a6308feebc001bf44213653b616bf245553a2085952d5df0e40256"
+    },
+    {
+      "module": "Ayxg.LTS.QfAbv.SymbolicStep",
+      "path": "ayxg/Ayxg/LTS/QfAbv/SymbolicStep.lean",
+      "sha256": "5f75396add251990e5079a16513c4baf9c988bc32da89d3bdee242f3da4fad61"
+    },
+    {
+      "module": "Wruh.FreshExtraction",
+      "path": "wruh/Wruh/FreshExtraction.lean",
+      "sha256": "ec1639c9c76196224ff057689bc50d54a2389c8ce6f661a300a4aee9a32e984e"
+    },
+    {
+      "module": "FutamuraCore",
+      "path": "sketch/FutamuraCore.lean",
+      "sha256": "b7ed2f9b74b3c31dc8fd0e0a4c77c22aa17b6131cb1929a85c6ea9c06db60f30"
+    },
+    {
+      "module": "FirstFutamura",
+      "path": "sketch/FirstFutamura.lean",
+      "sha256": "e3b35b82ec620a6ac40ee5e86bded1ab058fe716ac80f462fff4e6fd8abf1643"
+    }
+  ]
+}

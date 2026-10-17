@@ -1,0 +1,24 @@
+Id=utem-reborn-package-20261017-r2.service
+Description=UTEM reborn package check; corrected Lake identifier; parallelism=4
+Result=success
+ExecMainStartTimestamp=Sat 2026-10-17 11:03:18 PDT
+ExecMainExitTimestamp=Sat 2026-10-17 11:03:32 PDT
+ExecMainStatus=0
+Slice=fleet-build.slice
+MemoryPeak=565198848
+CPUUsageNSec=14771152000
+CPUQuotaPerSecUSec=4s
+MemoryHigh=6442450944
+MemoryMax=8589934592
+MemorySwapMax=0
+e3b35b82ec620a6ac40ee5e86bded1ab058fe716ac80f462fff4e6fd8abf1643  FirstFutamura.lean
+b7ed2f9b74b3c31dc8fd0e0a4c77c22aa17b6131cb1929a85c6ea9c06db60f30  FutamuraCore.lean
+de68910251578f3bc0823ad14bfc05a107361ed0f46e1b42ff3008c96e9a098a  UtemReborn.lean
+2ea754e60896d485ec242fb001c69804be2dd6c5205c9c89cf6ab2e0c5c7335f  lakefile.lean
+0f208d42adaf16a78f0f06300fbf2a37bd2a765cfbb2481189d59a55153c7c54  lake-manifest.json
+555d4707aa25edeb49bd49fd791eb6a27d91a67eb29aec7fb0bd25839e1bb801  flake.nix
+3ea79fbc9b0f970c7867beb15de9c882a5e7b22c23c037b0fa998b7eccd495ec  flake.lock
+8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632  lean-toolchain
+346dddd242c0669e77d7309d98786b120f6c0ddb8d1477fabd195fa5636f7894  scripts/check
+e7dc6b3e20d25ddff832926c6df5b8b5f79982c38037a61da30dd47996199096  tests/ProofAudit.lean
+Oct 17 11:03:18 nixos systemd[1]: Started UTEM reborn package check; corrected Lake identifier; parallelism=4.

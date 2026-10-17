@@ -1,0 +1,6 @@
+.lake/
+.direnv/
+result
+result-*
+.DS_Store
+._*

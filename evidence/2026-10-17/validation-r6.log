@@ -1,0 +1,102 @@
+Sat Oct 17 05:31:21 PM UTC 2026
+0::/fleet.slice/fleet-build.slice/codex-futamura-20261017-r6.service
+warning: not writing modified lock file of flake 'git+file:///tmp/codex-futamura-20261017/snapshot/ayxg':
+• Updated input 'ifrl':
+    'github:heartpunk/ifrl/c69a322ec903672a2def1841be661eb6a339c89b?narHash=sha256-hlNDNuLC882wfIQCXFaoZ2AYvP%2B56lPcxWx0WwzBfxY%3D' (2026-10-12)
+  → 'git+file:///tmp/codex-futamura-20261017/snapshot/ifrl?rev=c69a322ec903672a2def1841be661eb6a339c89b' (2026-10-12)
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+LEAN_PATH=/tmp/codex-futamura-20261017/build/lib/lean:/tmp/codex-bisim-20261016/ayxg-bisim-spike/.lake/floatlib-source-222236f04b51cfbf170bd4894542c9ac97436b15/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/aesop/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/batteries/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/mathlib/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/plausible/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/codex-bisim-20261016/wruh-bisim-spike/.lake/packages/Qq/.lake/build/lib/lean
+FloatLib-source=/nix/store/mddmq3dc3pirbv1b890mifck5cxir7s3-floatlib-ayxg-scoped
+FloatLib-key=222236f04b51cfbf170bd4894542c9ac97436b15
+Source manifest verified: 5106df06d92620da810c325b8779ce97a14f7f0e 16d77877512d97fad0622a7a6ac401cf8b2dd538
+
+Checking Ayxg.LTS
+Reusing PR module checked in validation-r5.log: Ayxg.LTS
+
+Checking Ayxg.QfAbv.FpTypes
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.FpTypes
+
+Checking Ayxg.QfAbv.Ast
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.Ast
+
+Checking Ayxg.QfAbv.FpEval
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.FpEval
+
+Checking Ayxg.QfAbv.Eval
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.Eval
+
+Checking Ayxg.QfAbv.Subst
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.Subst
+
+Checking Ayxg.QfAbv.Update
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.Update
+
+Checking Ayxg.QfAbv.SymbolicLabel
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.SymbolicLabel
+
+Checking Ayxg.LTS.QfAbv.SymbolicTransition
+Reusing PR module checked in validation-r5.log: Ayxg.LTS.QfAbv.SymbolicTransition
+
+Checking Ayxg.LTS.QfAbv.SymbolicTransitionSystem
+Reusing PR module checked in validation-r5.log: Ayxg.LTS.QfAbv.SymbolicTransitionSystem
+
+Checking Ayxg.STS
+Reusing PR module checked in validation-r5.log: Ayxg.STS
+
+Checking Ayxg.QfAbv.Step
+Reusing PR module checked in validation-r5.log: Ayxg.QfAbv.Step
+
+Checking Ayxg.LTS.QfAbv.SymbolicStep
+Reusing PR module checked in validation-r5.log: Ayxg.LTS.QfAbv.SymbolicStep
+
+Checking Wruh.FreshExtraction
+Reusing PR module checked in validation-r5.log: Wruh.FreshExtraction
+
+Checking FutamuraCore
+
+Checking FirstFutamura
+'Futamura.Sketch.FirstProjector.solves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.FirstProjector.entry_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.FirstProjector.first_futamura_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.extraction_view_step_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.extraction_view_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.projected_reference_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+Futamura.Sketch.FirstFutamuraProblem [Ayxg.QfAbv.FPInterpretation] {Code SourceEdge ResidualEdge : Type}
+  {Γsrc Γres Γinput : Ayxg.QfAbv.Ctx}
+  (spec : Futamura.Sketch.ProjectionSpec Code SourceEdge ResidualEdge Γsrc Γres Γinput) : Prop
+Futamura.Sketch.ProjectionCorrect [Ayxg.QfAbv.FPInterpretation] {Code SourceEdge ResidualEdge : Type}
+  {Γsrc Γres Γinput : Ayxg.QfAbv.Ctx}
+  (spec : Futamura.Sketch.ProjectionSpec Code SourceEdge ResidualEdge Γsrc Γres Γinput) (code : Code)
+  (source : Futamura.Sketch.System Γsrc SourceEdge) (residual : Futamura.Sketch.Residual Γres Γinput ResidualEdge)
+  (R : Option (Ayxg.LTS.QfAbv.Config Unit Γsrc) → Option (Ayxg.LTS.QfAbv.Config Unit Γres) → Prop) : Prop
+theorem Futamura.Sketch.projected_reference_bisimilar : ∀ [inst : Ayxg.QfAbv.FPInterpretation]
+  {Code SourceEdge ResidualEdge : Type} {Γsrc Γres Γinput : Ayxg.QfAbv.Ctx} {Binary : Type}
+  (A : Wruh.FreshExtraction.Adapter Binary SourceEdge Γsrc),
+  Wruh.FreshExtraction.SymexLaws A →
+    ∀ (binary : Binary) (spec : Futamura.Sketch.ProjectionSpec Code SourceEdge ResidualEdge Γsrc Γres Γinput)
+      (p : Futamura.Sketch.FirstProjector (Futamura.Sketch.extractionSpec spec)) (code : Code)
+      (input : Ayxg.QfAbv.Env Γinput),
+      Ayxg.QfAbv.Eval.evalBool input (spec.admissible code) = true →
+        Futamura.Bisimilar
+          (Futamura.Sketch.residualSystem (Futamura.Sketch.extractionSpec spec)
+            (p.specialize code (Wruh.FreshExtraction.extract A binary)))
+          (Futamura.viewed (A.reference binary).toLTS
+            (Futamura.Sketch.interfaceOf (spec.sourceEntry code) spec.sourceObservations))
+          (some
+            { control := (),
+              env :=
+                Ayxg.QfAbv.StateUpdate.eval input (p.specialize code (Wruh.FreshExtraction.extract A binary)).entry })
+          (some { control := (), env := Ayxg.QfAbv.StateUpdate.eval input (spec.sourceEntry code) }) :=
+fun [Ayxg.QfAbv.FPInterpretation] {Code SourceEdge ResidualEdge} {Γsrc Γres Γinput} {Binary} A laws binary spec p code
+    input allowed =>
+  Futamura.Bisimilar.trans
+    (Futamura.Bisimilar.symm
+      (Futamura.Sketch.FirstProjector.entry_bisimilar p code (Wruh.FreshExtraction.extract A binary) input allowed))
+    (Futamura.Sketch.extraction_view_bisimilar A laws binary
+      (Futamura.Sketch.interfaceOf (spec.sourceEntry code) spec.sourceObservations)
+      (some
+        { control := (),
+          env := Ayxg.QfAbv.StateUpdate.eval input ((Futamura.Sketch.extractionSpec spec).sourceEntry code) }))
+
+FULL_PROJECTOR_CHECK_PASSED
+Sat Oct 17 05:31:26 PM UTC 2026

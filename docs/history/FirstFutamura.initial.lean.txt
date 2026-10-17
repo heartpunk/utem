@@ -1,0 +1,205 @@
+import Wruh.FreshExtraction
+import FutamuraCore
+
+/-!
+First Futamura projection: a construction problem over the actual AYXG STS.
+
+Source revisions (PR heads, not main):
+* AYXG #1: 5106df06d92620da810c325b8779ce97a14f7f0e
+* WRUH #2: 16d77877512d97fad0622a7a6ac401cf8b2dd538
+
+The missing work is to INHABIT `FirstProjector spec`. This file specifies that
+work and derives its WRUH consequence; it neither supplies a specializer nor
+postulates that every possible specification has one.
+
+`Code` is the chosen code-object representation, with its indexing affordances.
+The fixed interfaces bind that code and interpret observations. `Layout` may
+include static source-index/provenance maps as well as representation choices.
+No user-supplied semantic `relates` predicate is accepted: the relation below
+is divergence-preserving weak bisimilarity over the actual AYXG transitions.
+-/
+namespace Futamura.Sketch
+
+open _root_.Ayxg.QfAbv _root_.Ayxg.LTS.QfAbv
+
+structure Shape where
+  Control : Type
+  context : Ctx
+  Edge : Type
+
+abbrev Shape.State (s : Shape) := Config s.Control s.context
+abbrev Shape.STS (s : Shape) :=
+  SymbolicTransitionSystem s.Control s.context s.Edge
+
+/-- Fixed before constructing the projector. Loading code leaves `Input` as
+the remaining runtime input. An unrestricted input domain uses `True`.
+The output interface is fixed for each layout, not chosen after execution. -/
+structure ProjectionSpec (source : Shape) where
+  Code : Type
+  Input : Type
+  Effect : Type
+  Result : Type
+  admissible : Code → Input → Prop
+  sourceInterface : Code → Interface source.State source.Edge Input Effect Result
+  Layout : Type
+  residualShape : Layout → Shape
+  residualInterface : (code : Code) → (layout : Layout) →
+    Interface (residualShape layout).State (residualShape layout).Edge Input Effect Result
+
+structure Residual {shape : Shape} (spec : ProjectionSpec shape) where
+  layout : spec.Layout
+  sts : (spec.residualShape layout).STS
+
+variable [FPInterpretation]
+
+def sourceSystem {shape : Shape} (spec : ProjectionSpec shape)
+    (code : spec.Code) (source : shape.STS) :=
+  viewed source.toLTS (spec.sourceInterface code)
+
+def residualSystem {shape : Shape} (spec : ProjectionSpec shape)
+    (code : spec.Code) (residual : Residual spec) :=
+  viewed residual.sts.toLTS (spec.residualInterface code residual.layout)
+
+/-- `Code × AYXG STS → AYXG STS`, with the output's type indices packaged. -/
+abbrev Project {shape : Shape} (spec : ProjectionSpec shape) :=
+  spec.Code → shape.STS → Residual spec
+
+/-- The substantive construction obligation: the two loaded entry states
+belong to the canonical bisimulation, for every remaining admissible input.
+That bisimulation contains forward, backward, and divergence clauses. -/
+def Correct {shape : Shape} (spec : ProjectionSpec shape) (project : Project spec) : Prop :=
+  ∀ code source input, spec.admissible code input →
+    Bisimilar (sourceSystem spec code source)
+      (residualSystem spec code (project code source))
+      (some ((spec.sourceInterface code).entry input))
+      (some ((spec.residualInterface code (project code source).layout).entry input))
+
+/-- The type to implement/prove. Its inhabitation is the open projector task. -/
+structure FirstProjector {shape : Shape} (spec : ProjectionSpec shape) where
+  project : Project spec
+  enter : Correct spec project
+
+namespace FirstProjector
+variable {shape : Shape} {spec : ProjectionSpec shape} (p : FirstProjector spec)
+
+/-- The state relation is fixed by AYXG semantics, not an arbitrary input. -/
+def Rel (code : spec.Code) (source : shape.STS) :=
+  Bisimilar (sourceSystem spec code source)
+    (residualSystem spec code (p.project code source))
+
+/-- Derived interface to the forward obligation inside `enter`.
+This is not a proof that a projector implementation exists. -/
+theorem forward (code : spec.Code) (source : shape.STS)
+    {s t} (related : p.Rel code source s t) {a s'}
+    (step : (sourceSystem spec code source).Tr s a s') :
+    ∃ t', WeakStep (residualSystem spec code (p.project code source)) t a t' ∧
+      p.Rel code source s' t' :=
+  Bisimilar.isBisimulation.forward related step
+
+theorem backward (code : spec.Code) (source : shape.STS)
+    {s t} (related : p.Rel code source s t) {a t'}
+    (step : (residualSystem spec code (p.project code source)).Tr t a t') :
+    ∃ s', WeakStep (sourceSystem spec code source) s a s' ∧
+      p.Rel code source s' t' :=
+  Bisimilar.isBisimulation.backward related step
+
+theorem divergence (code : spec.Code) (source : shape.STS)
+    {s t} (related : p.Rel code source s t) :
+    Diverges (sourceSystem spec code source) s ↔
+      Diverges (residualSystem spec code (p.project code source)) t :=
+  related.divergence
+
+/-- Futamura's result equation, including the preceding observable effects. -/
+theorem first_futamura_equation (code : spec.Code) (source : shape.STS)
+    (input : spec.Input) (allowed : spec.admissible code input)
+    (effects : List spec.Effect) (result : spec.Result) :
+    Returns (sourceSystem spec code source)
+      (some ((spec.sourceInterface code).entry input)) effects result ↔
+    Returns (residualSystem spec code (p.project code source))
+      (some ((spec.residualInterface code (p.project code source).layout).entry input))
+      effects result :=
+  (p.enter code source input allowed).results effects result
+
+theorem divergence_after_trace (code : spec.Code) (source : shape.STS)
+    (input : spec.Input) (allowed : spec.admissible code input)
+    (trace : List (Observation spec.Effect spec.Result)) :
+    DivergesAfter (sourceSystem spec code source)
+      (some ((spec.sourceInterface code).entry input)) trace ↔
+    DivergesAfter (residualSystem spec code (p.project code source))
+      (some ((spec.residualInterface code (p.project code source).layout).entry input)) trace :=
+  (p.enter code source input allowed).divergentTraces trace
+end FirstProjector
+
+/-! WRUH composition. The extraction changes edge representation, not states.
+Interpret each retained label through its `.edge`; reuse exactly the source
+entry and result interpretation. No compatibility theorem is assumed. -/
+open Wruh.FreshExtraction
+
+def nativeShape (Γ : Ctx) (E : Type) : Shape := ⟨Unit, Γ, E⟩
+def extractedShape (Γ : Ctx) (E : Type) : Shape := ⟨Unit, Γ, TaggedSuccessor E Γ⟩
+
+def extractionInterface {Γ : Ctx} {E Input Effect Result : Type}
+    (view : Interface (Config Unit Γ) E Input Effect Result) :
+    Interface (Config Unit Γ) (TaggedSuccessor E Γ) Input Effect Result where
+  entry := view.entry
+  observe := fun s successor t => view.observe s successor.edge t
+  result := view.result
+
+def extractionSpec {Γ : Ctx} {E : Type}
+    (spec : ProjectionSpec (nativeShape Γ E)) :
+    ProjectionSpec (extractedShape Γ E) where
+  Code := spec.Code
+  Input := spec.Input
+  Effect := spec.Effect
+  Result := spec.Result
+  admissible := spec.admissible
+  sourceInterface := fun code => extractionInterface (spec.sourceInterface code)
+  Layout := spec.Layout
+  residualShape := spec.residualShape
+  residualInterface := spec.residualInterface
+
+theorem extraction_view_step_iff {Binary E Input Effect Result : Type} {Γ : Ctx}
+    (A : Adapter Binary E Γ) (laws : SymexLaws A) (binary : Binary)
+    (view : Interface (Config Unit Γ) E Input Effect Result) (s a t) :
+    (viewed (extract A binary).toLTS (extractionInterface view)).Tr s a t ↔
+      (viewed (A.reference binary).toLTS view).Tr s a t := by
+  constructor
+  · intro h
+    cases h with
+    | step transition =>
+      exact .step (extract_transition_sound A laws binary _ _ _ transition)
+    | returned result => exact .returned result
+  · intro h
+    cases h with
+    | step transition =>
+      obtain ⟨successor, extracted, sameEdge⟩ :=
+        extract_transition_complete A laws binary _ _ _ transition
+      simpa [extractionInterface, sameEdge] using
+        (ViewedStep.step (view := extractionInterface view) extracted)
+    | returned result => exact .returned result
+
+theorem extraction_view_bisimilar {Binary E Input Effect Result : Type} {Γ : Ctx}
+    (A : Adapter Binary E Γ) (laws : SymexLaws A) (binary : Binary)
+    (view : Interface (Config Unit Γ) E Input Effect Result) (s) :
+    Bisimilar (viewed (extract A binary).toLTS (extractionInterface view))
+      (viewed (A.reference binary).toLTS view) s s :=
+  Bisimilar.of_transition_iff (extraction_view_step_iff A laws binary view) s
+
+/-- Full desired consequence: projected execution is bisimilar to the
+independently specified reference execution with the same fixed code loaded.
+`laws` is exactly WRUH's existing symex caveat. `p` is the projector still to
+be constructed; its `enter` field is the new proof obligation, not an axiom. -/
+theorem projected_reference_bisimilar {Binary E : Type} {Γ : Ctx}
+    (A : Adapter Binary E Γ) (laws : SymexLaws A) (binary : Binary)
+    (spec : ProjectionSpec (nativeShape Γ E))
+    (p : FirstProjector (extractionSpec spec))
+    (code : spec.Code) (input : spec.Input) (allowed : spec.admissible code input) :
+    Bisimilar
+      (residualSystem (extractionSpec spec) code (p.project code (extract A binary)))
+      (viewed (A.reference binary).toLTS (spec.sourceInterface code))
+      (some ((spec.residualInterface code (p.project code (extract A binary)).layout).entry input))
+      (some ((spec.sourceInterface code).entry input)) :=
+  (p.enter code (extract A binary) input allowed).symm.trans
+    (extraction_view_bisimilar A laws binary (spec.sourceInterface code) _)
+
+end Futamura.Sketch

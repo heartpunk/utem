@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_root"
+: "${AYXG_FLOATLIB_SOURCE:?Run scripts/check inside nix develop}"
+: "${AYXG_FLOATLIB_SOURCE_KEY:?Run scripts/check inside nix develop}"
+export WRUH_AYXG_SOURCE="$repo_root/.lake/packages/ayxg"
+lake build UtemReborn
+lake env lean -DwarningAsError=true tests/ProofAudit.lean

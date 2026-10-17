@@ -1,0 +1,40 @@
+Id=codex-futamura-20261017-r5.service
+Description=Futamura PR-head sketch check; upstream standard warnings; parallelism=4
+ActiveState=failed
+SubState=failed
+Result=exit-code
+ExecMainStartTimestamp=Sat 2026-10-17 10:29:53 PDT
+ExecMainExitTimestamp=Sat 2026-10-17 10:30:50 PDT
+ExecMainStatus=1
+Slice=fleet-build.slice
+MemoryPeak=537407488
+CPUUsageNSec=61224731000
+CPUQuotaPerSecUSec=4s
+MemoryHigh=6442450944
+MemoryMax=8589934592
+MemorySwapMax=0
+
+Id=codex-futamura-20261017-r6.service
+Description=Futamura corrected transport proof; cached checked PR modules; parallelism=4
+ActiveState=active
+SubState=exited
+Result=success
+ExecMainStartTimestamp=Sat 2026-10-17 10:31:21 PDT
+ExecMainExitTimestamp=Sat 2026-10-17 10:31:26 PDT
+ExecMainStatus=0
+Slice=fleet-build.slice
+MemoryPeak=305786880
+CPUUsageNSec=5265872000
+CPUQuotaPerSecUSec=4s
+MemoryHigh=6442450944
+MemoryMax=8589934592
+MemorySwapMax=0
+e3b35b82ec620a6ac40ee5e86bded1ab058fe716ac80f462fff4e6fd8abf1643  /tmp/codex-futamura-20261017/snapshot/sketch/FirstFutamura.lean
+b7ed2f9b74b3c31dc8fd0e0a4c77c22aa17b6131cb1929a85c6ea9c06db60f30  /tmp/codex-futamura-20261017/snapshot/sketch/FutamuraCore.lean
+35e9251dbb1fb3e83a4e7f79a2f310bf7beb174496b4e1e66151b7e2d7d5edc0  /tmp/codex-futamura-20261017/snapshot/manifest.json
+420280fa4ed0982fd868a8c2fc16021f8cb707d009e4ed31e137c7934bba4751  /tmp/codex-futamura-20261017/build/lib/lean/FirstFutamura.olean
+Oct 17 10:29:53 nixos systemd[1]: Started Futamura PR-head sketch check; upstream standard warnings; parallelism=4.
+Oct 17 10:30:50 nixos systemd[1]: codex-futamura-20261017-r5.service: Main process exited, code=exited, status=1/FAILURE
+Oct 17 10:30:50 nixos systemd[1]: codex-futamura-20261017-r5.service: Failed with result 'exit-code'.
+Oct 17 10:30:50 nixos systemd[1]: codex-futamura-20261017-r5.service: Consumed 1min 1.224s CPU time over 56.951s wall clock time, 512.5M memory peak, 4.2M written to disk.
+Oct 17 10:31:21 nixos systemd[1]: Started Futamura corrected transport proof; cached checked PR modules; parallelism=4.

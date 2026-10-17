@@ -1,0 +1,315 @@
+warning: Git tree '/tmp/utem-reborn-20261017/repo' is dirty
+⚠ [2160/2183] Replayed Ayxg.QfAbv.Subst
+warning: Ayxg/QfAbv/Subst.lean:143:102: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:144:100: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:145:102: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:149:141: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:150:152: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:152:105: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:153:154: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:154:156: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:155:147: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:169:90: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:173:97: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:174:101: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:175:101: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:143:102: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:144:100: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:145:102: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:149:141: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:150:152: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:152:105: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:153:154: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:154:156: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:155:147: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:169:90: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:173:97: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:174:101: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:175:101: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:176:95: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ayxg/QfAbv/Subst.lean:351:87: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:352:85: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:353:87: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:357:112: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:358:123: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:360:90: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:361:125: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:362:127: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:363:118: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:375:37: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:378:82: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:379:86: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:380:86: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ayxg/QfAbv/Subst.lean:351:87: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:352:85: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:353:87: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:357:112: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:358:123: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:360:90: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:361:125: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:362:127: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:363:118: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:375:37: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:378:82: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:379:86: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:380:86: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ayxg/QfAbv/Subst.lean:381:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2161/2183] Replayed Ayxg.QfAbv.Update
+warning: Ayxg/QfAbv/Update.lean:51:8: automatically included section variable(s) unused in theorem `_private.Ayxg.QfAbv.Update.0.Ayxg.QfAbv.StateUpdate.env_eq_of_lookup_eq`:
+  [FPInterpretation]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FPInterpretation] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2163/2183] Replayed Ayxg.LTS.QfAbv.SymbolicTransition
+warning: Ayxg/LTS/QfAbv/SymbolicTransition.lean:85:8: automatically included section variable(s) unused in theorem `Ayxg.LTS.QfAbv.SymbolicTransition.edgeSemantics_source`:
+  [FPInterpretation]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FPInterpretation] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ayxg/LTS/QfAbv/SymbolicTransition.lean:89:8: automatically included section variable(s) unused in theorem `Ayxg.LTS.QfAbv.SymbolicTransition.edgeSemantics_symbolicLabel`:
+  [FPInterpretation]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FPInterpretation] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: Ayxg/LTS/QfAbv/SymbolicTransition.lean:93:8: automatically included section variable(s) unused in theorem `Ayxg.LTS.QfAbv.SymbolicTransition.edgeSemantics_nextControl`:
+  [FPInterpretation]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FPInterpretation] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2164/2183] Replayed Ayxg.LTS.QfAbv.SymbolicTransitionSystem
+warning: Ayxg/LTS/QfAbv/SymbolicTransitionSystem.lean:134:0: automatically included section variable(s) unused in theorem `Ayxg.LTS.QfAbv.SymbolicTransitionSystem.transAt_mem_src`:
+  [FPInterpretation]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FPInterpretation] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2168/2183] Replayed Wruh.FreshExtraction
+warning: Wruh/FreshExtraction.lean:55:42: This simp argument is unused:
+  SymbolicLabel.denotes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [extract, SymbolicTransitionSystem.ofSymbolicSuccessors, SymbolicTransitionSystem.toLTS,
+    SymbolicEdgeSemantics.denotes, SymbolicEdgeSemantics.nextConfig, QFAbvStep.denotes]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2169/2183] Built Reference.Strong (388ms)
+✔ [2170/2183] Built FirstFutamura (2.2s)
+✔ [2171/2183] Built Reference.Facts (3.7s)
+✔ [2172/2183] Built Reference.Rewrite (3.0s)
+✔ [2173/2183] Built Reference.Binders (2.2s)
+✔ [2174/2183] Built Reference.Specialize (2.9s)
+✔ [2175/2183] Built Reference.Transfer (1.0s)
+✔ [2176/2183] Built Reference.Contexts (2.1s)
+✔ [2177/2183] Built Reference.Tagged (2.0s)
+✔ [2178/2183] Built Reference.Graph (2.3s)
+✔ [2179/2183] Built Reference.GraphCorrect (1.0s)
+✔ [2180/2183] Built Reference.Projector (2.0s)
+✔ [2181/2183] Built Reference (1.9s)
+✔ [2182/2183] Built UtemReborn (1.8s)
+Build completed successfully (2183 jobs).
+'Futamura.Sketch.FirstProjector.solves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.FirstProjector.entry_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.FirstProjector.first_futamura_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.extraction_view_step_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.extraction_view_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Sketch.projected_reference_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+Futamura.Sketch.FirstFutamuraProblem [Ayxg.QfAbv.FPInterpretation] {Code SourceEdge ResidualEdge : Type}
+  {Γsrc Γres Γinput : Ayxg.QfAbv.Ctx}
+  (spec : Futamura.Sketch.ProjectionSpec Code SourceEdge ResidualEdge Γsrc Γres Γinput) : Prop
+Futamura.Sketch.ProjectionCorrect [Ayxg.QfAbv.FPInterpretation] {Code SourceEdge ResidualEdge : Type}
+  {Γsrc Γres Γinput : Ayxg.QfAbv.Ctx}
+  (spec : Futamura.Sketch.ProjectionSpec Code SourceEdge ResidualEdge Γsrc Γres Γinput) (code : Code)
+  (source : Futamura.Sketch.System Γsrc SourceEdge) (residual : Futamura.Sketch.Residual Γres Γinput ResidualEdge)
+  (R : Option (Ayxg.LTS.QfAbv.Config Unit Γsrc) → Option (Ayxg.LTS.QfAbv.Config Unit Γres) → Prop) : Prop
+theorem Futamura.Sketch.projected_reference_bisimilar : ∀ [inst : Ayxg.QfAbv.FPInterpretation]
+  {Code SourceEdge ResidualEdge : Type} {Γsrc Γres Γinput : Ayxg.QfAbv.Ctx} {Binary : Type}
+  (A : Wruh.FreshExtraction.Adapter Binary SourceEdge Γsrc),
+  Wruh.FreshExtraction.SymexLaws A →
+    ∀ (binary : Binary) (spec : Futamura.Sketch.ProjectionSpec Code SourceEdge ResidualEdge Γsrc Γres Γinput)
+      (p : Futamura.Sketch.FirstProjector (Futamura.Sketch.extractionSpec spec)) (code : Code)
+      (input : Ayxg.QfAbv.Env Γinput),
+      Ayxg.QfAbv.Eval.evalBool input (spec.admissible code) = true →
+        Futamura.Bisimilar
+          (Futamura.Sketch.residualSystem (Futamura.Sketch.extractionSpec spec)
+            (p.specialize code (Wruh.FreshExtraction.extract A binary)))
+          (Futamura.viewed (A.reference binary).toLTS
+            (Futamura.Sketch.interfaceOf (spec.sourceEntry code) spec.sourceObservations))
+          (some
+            { control := (),
+              env :=
+                Ayxg.QfAbv.StateUpdate.eval input (p.specialize code (Wruh.FreshExtraction.extract A binary)).entry })
+          (some { control := (), env := Ayxg.QfAbv.StateUpdate.eval input (spec.sourceEntry code) }) :=
+fun [Ayxg.QfAbv.FPInterpretation] {Code SourceEdge ResidualEdge} {Γsrc Γres Γinput} {Binary} A laws binary spec p code
+    input allowed =>
+  Futamura.Bisimilar.trans
+    (Futamura.Bisimilar.symm
+      (Futamura.Sketch.FirstProjector.entry_bisimilar p code (Wruh.FreshExtraction.extract A binary) input allowed))
+    (Futamura.Sketch.extraction_view_bisimilar A laws binary
+      (Futamura.Sketch.interfaceOf (spec.sourceEntry code) spec.sourceObservations)
+      (some
+        { control := (),
+          env := Ayxg.QfAbv.StateUpdate.eval input ((Futamura.Sketch.extractionSpec spec).sourceEntry code) }))
+'Futamura.Reference.specialize_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Reference.specializeUpdate_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Reference.graph_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Reference.graph_backward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Reference.project_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Reference.first_futamura_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Futamura.Reference.projected_wruh_bisimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+Futamura.Reference.project [Ayxg.QfAbv.FPInterpretation] {Γ : Ayxg.QfAbv.Ctx} {Code : Type} {Γinput : Ayxg.QfAbv.Ctx}
+  {E : Type} (budget : ℕ) (cells : Futamura.Reference.Tracked Γ)
+  (sourceEntry : Code → Ayxg.QfAbv.StateUpdate Γinput Γ) :
+  Futamura.Sketch.Project Code E (Futamura.Reference.CompiledEdge budget Γ E) Γ
+    (Futamura.Reference.ResidualCtx budget Γ) Γinput
+Futamura.Reference.referenceProjector [Ayxg.QfAbv.FPInterpretation] {Γ : Ayxg.QfAbv.Ctx} {Code : Type}
+  {Γinput : Ayxg.QfAbv.Ctx} {E Effect Result : Type} (budget : ℕ) (cells : Futamura.Reference.Tracked Γ)
+  (sourceEntry : Code → Ayxg.QfAbv.StateUpdate Γinput Γ)
+  (admissible : Code → Ayxg.QfAbv.Expr Γinput Ayxg.QfAbv.TermSort.bool)
+  (observations : Futamura.Sketch.Observations Γ E Effect Result) :
+  Futamura.Sketch.FirstProjector (Futamura.Reference.specification budget sourceEntry admissible observations)
+theorem Futamura.Reference.project_correct : ∀ [inst : Ayxg.QfAbv.FPInterpretation] {Γ : Ayxg.QfAbv.Ctx} {Code : Type}
+  {Γinput : Ayxg.QfAbv.Ctx} {E Effect Result : Type} (budget : ℕ) (cells : Futamura.Reference.Tracked Γ)
+  (sourceEntry : Code → Ayxg.QfAbv.StateUpdate Γinput Γ)
+  (admissible : Code → Ayxg.QfAbv.Expr Γinput Ayxg.QfAbv.TermSort.bool)
+  (observations : Futamura.Sketch.Observations Γ E Effect Result) (code : Code) (source : Futamura.Sketch.System Γ E),
+  ∃ R,
+    Futamura.Sketch.ProjectionCorrect (Futamura.Reference.specification budget sourceEntry admissible observations) code
+      source (Futamura.Reference.project budget cells sourceEntry code source) R :=
+fun [Ayxg.QfAbv.FPInterpretation] {Γ} {Code} {Γinput} {E Effect Result} budget cells sourceEntry admissible observations
+    code source =>
+  let table := Futamura.Reference.buildContexts budget cells source (sourceEntry code);
+  let strong := Futamura.Reference.observed_strong cells table source (sourceEntry code) observations;
+  Exists.intro (Futamura.Reference.ViewRel table)
+    {
+      entry := fun input _allowed =>
+        Futamura.Reference.ViewRel.active
+          (Exists.intro (Futamura.Reference.entryIndex budget)
+            ⟨Futamura.Reference.taggedEntry_eval budget (sourceEntry code) input,
+              Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      Futamura.Reference.Holds _a
+                        { control := (),
+                            env :=
+                              Ayxg.QfAbv.StateUpdate.eval input
+                                ((Futamura.Reference.specification budget sourceEntry admissible
+                                      observations).sourceEntry
+                                  code) }.env)
+                    (Futamura.Reference.buildContexts_entry budget cells source (sourceEntry code))))
+                (Futamura.Reference.seed_correct (sourceEntry code) cells input)⟩),
+      forward := fun {s} {r} => (Futamura.StrongBisimulation.weak strong).forward,
+      backward := fun {s} {r} => (Futamura.StrongBisimulation.weak strong).backward,
+      divergence := fun {s} {r} => (Futamura.StrongBisimulation.weak strong).divergence }

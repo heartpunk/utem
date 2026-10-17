@@ -1,14 +1,23 @@
 # UTEM reborn
 
-A typed first Futamura projector contract over AYXG symbolic transition systems,
-with a conditional correctness bridge to WRUH's reference semantics.
+A generic reference first Futamura projector over AYXG symbolic transition
+systems, with a Lean proof of correctness and a bridge to WRUH's reference
+semantics conditional on its existing `SymexLaws`.
 
-The contract and its conditional theorems are checked Lean. A specializer
-implementation and proof that the projector type is inhabited are deliberately
-not supplied. See [the contract and literature audit](docs/contract.md).
+The implementation binds code in a returned typed initializer, specializes
+expressions and complete state updates, discovers bounded facts contexts, and
+emits a finite residual STS. It proves entry, two-sided transition correspondence,
+observable effects/results, and silent-divergence preservation. See the
+[implementation guide](docs/reference-implementation.md) and the original
+[contract and literature audit](docs/contract.md).
 
-## Read the sketch
+## Read the implementation
 
+- [`Reference/Projector.lean`](Reference/Projector.lean): executable `project`,
+  `project_correct`, inhabited `referenceProjector`, result equation, and
+  `projected_wruh_bisimilar` instantiated with this implementation.
+- [`Reference/GraphCorrect.lean`](Reference/GraphCorrect.lean): exact forward and
+  backward transitions, including origin preservation and context consistency.
 - [`FirstFutamura.lean`](FirstFutamura.lean): typed code loading, residual STS plus
   initialization, entry/forward/backward/divergence obligations, projector type,
   observable result equation, and WRUH composition.
@@ -48,5 +57,7 @@ The normal package command above passed on NixOS on 2026-10-17 using the
 pinned dependencies and their caches. See the [package build and axiom log](evidence/2026-10-17/package-check.log)
 and [source hashes and resource measurements](evidence/2026-10-17/package-build-metadata.txt).
 The original full-sketch check is also retained in
-[`evidence/2026-10-17/`](evidence/2026-10-17/). The mathematical source files are
-unchanged from that checked sketch.
+[`evidence/2026-10-17/`](evidence/2026-10-17/). Those earlier logs cover the original contract. The implemented projector's
+[full package build and axiom audit](evidence/2026-10-17/reference/package-check.log)
+also passed. Its proof scope, accepted performance limitations and completed
+review reports are in the [implementation guide](docs/reference-implementation.md).

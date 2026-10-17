@@ -1,4 +1,4 @@
-# First Futamura projector — contract sketch
+# First Futamura projector — contract and reference implementation
 
 The sketch preserves the Obsidian UTEM outline: typed entry maps and explicit
 `entry`, `forward`, and `backward` obligations. It incorporates the subsequent
@@ -9,8 +9,11 @@ of silent divergence. The residual object contains its own typed entry map.
 contract declarations and conditional proofs, passed Lean 4.34.0 on NixOS against
 the pinned PR sources. There are no `sorry`/`admit` placeholders; the axiom audit
 contains only `propext`, `Classical.choice`, and `Quot.sound`.
-`FirstFutamuraProblem` is stated but not proved: constructing the specializer and
-its correctness proof is the deliberately deferred work.
+The original contract-only milestone deferred construction. That work is now
+implemented in `Reference/`: `referenceProjector` constructs an inhabitant for
+its explicit tag-erasure specification, and `project_correct` proves its full
+correctness. This does not assert existence for arbitrary incompatible
+specifications. See [the implementation guide](reference-implementation.md).
 
 ## Contract and construction goal
 
@@ -82,13 +85,15 @@ returned entry map that binds the fixed code**—is a legitimate, unoptimized
 solution of the semantic equation when the representations permit it. Futamura
 explicitly describes binding a constant before the original body in the s-m-n
 construction (1983, p. 14). Rejecting that construction would add an optimization
-requirement beyond semantic correctness. The intended stronger residualization
-can be implemented later without misrepresenting what this theorem specifies.
+requirement beyond semantic correctness. The reference implementation now performs constant/memory propagation and
+context specialization in addition to binding; it claims no interpreter-overhead
+elimination guarantee.
 
 The earlier `enter : Correct spec project` also concealed all simulation
 obligations under an entry-like name. They are now visible fields of
 `ProjectionCorrect`. Packaging a correctly implemented specializer and its proof
-is a valid contract; constructing that package remains the open work.
+is a valid contract; `Reference.referenceProjector` now constructs that package
+for the implemented residual representation.
 
 ## WRUH composition and exact assumptions
 
@@ -185,9 +190,10 @@ not rebuilt from source in this run.
 - Checked `FutamuraCore.lean` SHA256:
   `b7ed2f9b74b3c31dc8fd0e0a4c77c22aa17b6131cb1929a85c6ea9c06db60f30`.
 
-The results validate the specified contract and its conditional consequences.
-They do not establish an inhabitant of `FirstProjector spec`, the concrete angr
-adapter's `SymexLaws`, or the concrete CPython loading/observation instantiation.
+These historical results validate the specified contract and its conditional
+consequences. The newer reference implementation establishes an inhabitant for
+its explicit specification; it does not prove the concrete angr adapter's
+`SymexLaws` or supply CPython loading/observation decoders.
 
 [^ayxg]: `heartpunk/ayxg` at `5106df06d92620da810c325b8779ce97a14f7f0e`,
     `Ayxg/LTS/QfAbv/SymbolicTransitionSystem.lean`, `SymbolicTransitionSystem`

@@ -10,4 +10,4 @@ require wruh from git
 
 @[default_target]
 lean_lib UtemReborn where
-  roots := #[`UtemReborn, `FutamuraCore, `FirstFutamura]
+  roots := #[`UtemReborn, `FutamuraCore, `FirstFutamura, `Reference]

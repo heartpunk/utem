@@ -1,0 +1,27 @@
+Host: nixos
+Snapshot: /tmp/utem-reborn-20261017/repo
+Command: nix develop --command scripts/check
+LEAN_NUM_THREADS=4
+Git metadata transferred with source; cached dependencies retained.
+Id=utem-reference-package-20261017-r1.service
+ActiveState=active
+SubState=exited
+InvocationID=1a6da09b33cd4d77a1a080b6527b67d4
+Result=success
+ExecMainStartTimestamp=Sat 2026-10-17 11:46:29 PDT
+ExecMainExitTimestamp=Sat 2026-10-17 11:47:05 PDT
+ExecMainCode=1
+ExecMainStatus=0
+Slice=fleet-build.slice
+MemoryPeak=798838784
+MemorySwapPeak=0
+CPUUsageNSec=40556651000
+CPUQuotaPerSecUSec=4s
+MemoryHigh=6442450944
+MemoryMax=8589934592
+MemorySwapMax=0
+TasksMax=128
+User=heartpunk
+Group=users
+Oct 17 11:46:29 nixos systemd[1]: Starting UTEM proved reference projector package and axiom check; parallelism=4...
+Oct 17 11:46:29 nixos systemd[1]: Started UTEM proved reference projector package and axiom check; parallelism=4.

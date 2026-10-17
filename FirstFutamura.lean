@@ -17,9 +17,10 @@ it takes only the remaining input. No residual-side function takes `Code`.
 Observation decoders are fixed for the source and target representations and
 do not depend on code, a projector-chosen layout, or the source STS.
 
-`FirstFutamuraProblem` is the construction goal. No implementation or proof of
-that goal is supplied here. `projected_reference_bisimilar` is the conditional
-composition theorem, whose assumptions are explicitly named.
+This file specifies the contract. `Reference/Projector.lean` now implements and
+proves a concrete inhabitant for its explicit tag-erasure representation.
+`projected_reference_bisimilar` remains the generic conditional composition
+theorem; the reference module instantiates its specialization leg.
 
 Validation status and exact build evidence are recorded in README.md.
 -/

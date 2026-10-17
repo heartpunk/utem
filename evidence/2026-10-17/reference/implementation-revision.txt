@@ -1,0 +1,9 @@
+Repository: utem-reborn
+Implementation Git commit: 826993257f621374ec7d349406e8a64251e1a0d3
+Implementation JJ change: xkktwnnu
+
+The reviewed Reference source locators and fingerprints in review-existing.md,
+review-early.md, and review-final.md refer to the implementation in this commit.
+Full build source identity is recorded in source-manifest.json and matched
+against remote-source-hashes.txt. Subsequent evidence-only commits do not change
+the checked implementation.

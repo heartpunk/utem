@@ -1,4 +1,16 @@
-# UTEM reborn
+# UTEM
+
+## human overview
+
+so uhm uh. utem exists basically bcz [wruh](https://github.com/heartpunk/wruh) can at present and for the near term future only handle binaries. and there's lots of interpreted langs and bytecode and whatnot in this world. and so it turns out that practically speaking, we needed a 1st futamura projector so we could take the models wruh can give us of binaries and use them models of a langs interpreter plus the code the lang would interpret (like, some python or ruby or js program) and turn it into yet another model for us.
+
+tl;dr: utem makes it so instead of wruh just letting us make ayxg sts models of binary programs we can also in principle make ayxg sts models of all interpreted programs and hence all programs. afaik there is no reason at this point why we can't, w/a lot of coordinated effort and tryign hard and believing in our collective selves, get models of all software in lean such that we can prove it all. utem is a core of that bootstrap.
+
+### review status
+
+i've checked it over like skim-like and the walkthru that's gonna be committed soon-like at [ufda main](https://github.com/heartpunk/ufda) but it is admittedly not read in its entirety every character by me. astra and deepseek both agree it is a first futamura projector. it doesn't seem like it could not be from what i've seen. the types correspond clear as day. but it is not 100% properly reviewed yet, and it should be given what it intends to do.
+
+## Generated Overview
 
 A generic reference first Futamura projector over AYXG symbolic transition
 systems, with a Lean proof of correctness and a bridge to WRUH's reference

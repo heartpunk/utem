@@ -16,10 +16,6 @@
         default = pkgs.mkShell {
           # Reuse AYXG's matching Lean toolchain and patched FloatLib source.
           inputsFrom = [ ayxg.devShells.${system}.ci ];
-          shellHook = ''
-            # WRUH's Lake configuration requires the same AYXG checkout.
-            export WRUH_AYXG_SOURCE="$PWD/.lake/packages/ayxg"
-          '';
         };
       });
   };

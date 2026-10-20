@@ -2,9 +2,9 @@
   description = "UTEM reborn: AYXG first Futamura projector contract";
 
   inputs = {
-    ifrl.url = "github:heartpunk/ifrl/c69a322ec903672a2def1841be661eb6a339c89b";
+    ifrl.url = "github:heartpunk/ifrl/0eeb6ac73ee585ccdf746ba4f2c6e62291da930a";
     ayxg = {
-      url = "github:heartpunk/ayxg/5d5ce159200dc4e7eeaf9965bdac6c857b2b7b3c";
+      url = "github:heartpunk/ayxg/c7bd6ecc08a570c5b4a67643dcd33fc6c461bfec";
       inputs.ifrl.follows = "ifrl";
     };
     nixpkgs.follows = "ifrl/nixpkgs";
@@ -16,10 +16,6 @@
         default = pkgs.mkShell {
           # Reuse AYXG's matching Lean toolchain and patched FloatLib source.
           inputsFrom = [ ayxg.devShells.${system}.ci ];
-          shellHook = ''
-            # WRUH's Lake configuration requires the same AYXG checkout.
-            export WRUH_AYXG_SOURCE="$PWD/.lake/packages/ayxg"
-          '';
         };
       });
   };

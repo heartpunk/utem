@@ -65,6 +65,8 @@ invocation. The first build needs the Lean dependency caches or sufficient space
 to populate them. For remote builds, transfer source and `.git` together, retain
 existing caches, and run the build under the available fleet build reservation.
 
+The main-branch Cachix workflow also builds this development shell and publishes its store paths to the `utem` cache.
+
 The normal package command above passed on NixOS on 2026-10-17 using the
 pinned dependencies and their caches. See the [package build and axiom log](evidence/2026-10-17/package-check.log)
 and [source hashes and resource measurements](evidence/2026-10-17/package-build-metadata.txt).

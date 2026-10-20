@@ -4,9 +4,9 @@ open Lake DSL
 package utemReborn
 
 require ayxg from git
-  "https://github.com/heartpunk/ayxg.git" @ "885e5d86ba5ef606aa65e81cbfaecaa98770f2df"
+  "https://github.com/heartpunk/ayxg.git" @ "c8eb84b0803ce37c2419c20fd241b1977f2b911a"
 require wruh from git
-  "https://github.com/heartpunk/wruh.git" @ "840ec2b8f04849a00752e8335dcf008a103831f5"
+  "https://github.com/heartpunk/wruh.git" @ "cb2a7709e8e5414f6a6ef7ec30c0bcb2199e5c36"
 
 @[default_target]
 lean_lib UtemReborn where

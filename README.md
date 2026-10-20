@@ -43,9 +43,9 @@ observable effects/results, and silent-divergence preservation. See the
 
 | Dependency | Pinned revision | Role |
 | --- | --- | --- |
-| IFRL | `57edc5144c506bd5a13028738e6df057528f402c` | Shared Nix inputs and toolchain infrastructure |
-| AYXG | `ab2bee80d559b864ca512058b75db75e2052d357` | Typed STS, QF_ABV syntax and semantics, patched FloatLib environment |
-| WRUH | `e9931eaf74199fb7c66d2b1609a7e8aa502ed659` | `Wruh.FreshExtraction` and `SymexLaws` |
+| IFRL | `9aa5e2953b840c3ec0879c2c4fa068dee3348498` | Shared Nix inputs and toolchain infrastructure |
+| AYXG | `fe01a093ea197b84e92f11f18804814d8f9a9448` | Typed STS, QF_ABV syntax and semantics, patched FloatLib environment |
+| WRUH | `d9bfd5e92e9bf96bf0eb9b6e3ad49a2ae5998eec` | `Wruh.FreshExtraction` and `SymexLaws` |
 
 Lean is pinned to **4.34.0**. `flake.lock` pins the Nix dependency graph;
 `lake-manifest.json` pins the Lean dependencies. WRUH and this package share the

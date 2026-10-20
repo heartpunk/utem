@@ -2,9 +2,9 @@
   description = "UTEM reborn: AYXG first Futamura projector contract";
 
   inputs = {
-    ifrl.url = "github:heartpunk/ifrl/9aa5e2953b840c3ec0879c2c4fa068dee3348498";
+    ifrl.url = "github:heartpunk/ifrl/aee884bfc890f05c655b491677c0687b6ee1510c";
     ayxg = {
-      url = "github:heartpunk/ayxg/fe01a093ea197b84e92f11f18804814d8f9a9448";
+      url = "github:heartpunk/ayxg/885e5d86ba5ef606aa65e81cbfaecaa98770f2df";
       inputs.ifrl.follows = "ifrl";
     };
     nixpkgs.follows = "ifrl/nixpkgs";

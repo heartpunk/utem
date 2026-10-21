@@ -13,4 +13,5 @@ jobs:
     uses: heartpunk/ifrl/.github/workflows/suite-baselines.yml@ci-baselines # zizmor: ignore[unpinned-uses] -- IFRL PR #3 bookmark during stacked review
     with:
       python-nix-shell: ''
-      lean-nix-shell: '.#ci'
+      lean-nix-shell: '.'
+b807372ee3647cc92eb6fab54d86d5901ea98586

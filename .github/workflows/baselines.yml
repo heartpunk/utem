@@ -10,7 +10,8 @@ permissions:
   contents: read
 jobs:
   baselines:
-    uses: heartpunk/ifrl/.github/workflows/suite-baselines.yml@ci-baselines # zizmor: ignore[unpinned-uses] -- IFRL PR #3 bookmark during stacked review
+    uses: heartpunk/ifrl/.github/workflows/suite-baselines.yml@main
     with:
+      baseline-ref: main
       python-nix-shell: ''
       lean-nix-shell: '.'

@@ -46,7 +46,7 @@ jobs:
           git config --global --add url.https://github.com/.insteadOf ssh://git@github.com/
           git config --global --add url.https://github.com/.insteadOf git@github.com:
       - name: Evaluate the pinned environment
-        run: nix flake check --no-build --no-write-lock-file
+        run: nix flake check --no-write-lock-file
       - name: Build the projector and run its proof audit
         run: |
           nix develop --no-write-lock-file --command bash -euo pipefail -c '

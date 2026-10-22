@@ -8,17 +8,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1792520586,
+        "lastModified": 1792535546,
         "narHash": "sha256-M43QqWw9m0rgeFN5bceTw428RdcsTLu7Ggi59at93uk=",
         "owner": "heartpunk",
         "repo": "angr-nix",
-        "rev": "0e43b3a7ca6700631d68a5cc169938d6a9229a83",
+        "rev": "14ae4f79e7e694bdd2c25624c119897480ce1348",
         "type": "github"
       },
       "original": {
         "owner": "heartpunk",
         "repo": "angr-nix",
-        "rev": "0e43b3a7ca6700631d68a5cc169938d6a9229a83",
+        "rev": "14ae4f79e7e694bdd2c25624c119897480ce1348",
         "type": "github"
       }
     },
@@ -28,11 +28,6 @@
         "ifrl": [
           "ifrl"
         ],
-        "lean4-nix": [
-          "ayxg",
-          "ifrl",
-          "lean4-nix"
-        ],
         "nixpkgs": [
           "ayxg",
           "ifrl",
@@ -40,17 +35,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1792538226,
-        "narHash": "sha256-R5Y04DIAG16GCQopqXOSp0VR+4nKS1jMU9vQNvl5UNM=",
+        "lastModified": 1792636652,
+        "narHash": "sha256-GUegGfXER8X0M5qqnrf4WWInt4dwzFTAb173Rc6iTx8=",
         "owner": "heartpunk",
         "repo": "ayxg",
-        "rev": "607e482f4f6ff846cf213971ab958f466df901b2",
+        "rev": "c5ed52ee598776d5db79a3c211f1f00fe4c64bfe",
         "type": "github"
       },
       "original": {
         "owner": "heartpunk",
+        "ref": "main",
         "repo": "ayxg",
-        "rev": "607e482f4f6ff846cf213971ab958f466df901b2",
         "type": "github"
       }
     },
@@ -97,17 +92,17 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1792537875,
-        "narHash": "sha256-HUmaoZ7Bcrfjb1K4ej3LEHq3cM2Q2YBLV6yWysnZKR4=",
+        "lastModified": 1792636611,
+        "narHash": "sha256-lefXqToQoZFigR5bnL/T9QxEz/BmBpCcQTs7mWYO898=",
         "owner": "heartpunk",
         "repo": "ifrl",
-        "rev": "128c222f0bf214f1716511c5a1ebd395f096fc89",
+        "rev": "8e82c7607a5101bcea8a244fbc4d603e666cd253",
         "type": "github"
       },
       "original": {
         "owner": "heartpunk",
+        "ref": "main",
         "repo": "ifrl",
-        "rev": "128c222f0bf214f1716511c5a1ebd395f096fc89",
         "type": "github"
       }
     },

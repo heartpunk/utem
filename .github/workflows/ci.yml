@@ -50,8 +50,8 @@ jobs:
       - name: Build the projector and run its proof audit
         run: |
           nix develop --no-write-lock-file --command bash -euo pipefail -c '
-            lake update ayxg wruh
             lake exe cache get
             lake build UtemReborn
             lake env lean -DwarningAsError=true tests/ProofAudit.lean
+            git diff --exit-code -- lake-manifest.json
           '
